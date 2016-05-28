@@ -138,21 +138,21 @@ $(".colours >*").mousedown(function(e){
    }
 });
 
-$(".individual .red").mousedown(function(){
+$(".individual .red").mousedown(function(e){
    var ts = Math.floor(e.timeStamp);
    $(this).append('<div class="blast" id="'+ts+'" style="background-color:rgb(' + r + ',0,0)"></div>');
    remove("#" + ts);
    $(".colourvalue").val(r);
 });
 
-$(".individual .green").mousedown(function(){
+$(".individual .green").mousedown(function(e){
    var ts = Math.floor(e.timeStamp);
    $(this).append('<div class="blast" id="'+ts+'" style="background-color:rgb(0,' + g + ',0)" onload="remove()"></div>');
    remove("#" + ts);
    $(".colourvalue").val(g);
 });
 
-$(".individual .blue").mousedown(function(){
+$(".individual .blue").mousedown(function(e){
    var ts = Math.floor(e.timeStamp);
    $(this).append('<div class="blast" id="'+ts+'" style="background-color:rgb(0,0,' + b + ')" onload="remove()"></div>');
    remove("#" + ts);
